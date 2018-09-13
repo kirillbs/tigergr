@@ -383,3 +383,7 @@ a:focus {outline:0;}
 .modal-backdrop.fade.show{
     display: none !important;
 }
+.build-section.know-base .row > div{
+    padding-left: 15px;
+    padding-right: 15px;
+}
