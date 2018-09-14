@@ -10,7 +10,7 @@
     <title>Album example for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,300" rel="stylesheet">
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
@@ -50,8 +50,39 @@
             <div class="col-sm-4">
                 <ul class="group-list">
                     <li class="faq-sub-title">Sub title sub title</li>
-                    <li><a href="#" data-toggle="modal" data-target="#exampleModal">Text 1</a></li>
-                    <li><a href="#" data-toggle="modal" data-target="#exampleModal2">Text 2 2 2 22</a></li>
+                    <li>
+                        <a href="#">Text 1</a>
+                        <div class="faq-modal-link-content">
+                            <div class="faq-modal-title">My data file doesn't have a header but I still want to name the columns.</div>
+                            <div class="faq-modal-date">Updated 22, Feb 2017</div>
+                            <p>You can define a header line (a sequence of column names) within a loading job using a DEFINE HEADER statement, such as the following:</p>
+                            <div class="modal-faq-code">
+                                CREATE ONLINE_POST JOB load2 FOR GRAPH LaborForce{<br>
+                                DEFINE HEADER head1 = "jobId", "jobName";<br>
+                                LOAD TO VERTEX occupation VALUES ($"jobId", $"jobName") USING USER_DEFINED_HEADER="head1";<br>
+                                }
+                            </div>
+                            <p>You can define a header line (a sequence of column names) within a loading job using a DEFINE HEADER statement, such as the following:</p>
+                            <div class="modal-faq-code">CREATE ONLINE_POST JOB load2 FOR GRAPH LaborForce</div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">Text 2 2 2 22</a>
+                        <div class="faq-modal-link-content">
+                            <div class="faq-modal-title">My data file doesn't have a header but I still want to name the columns.2</div>
+                            <div class="faq-modal-date">Updated 22, Feb 2017</div>
+                            <p>You can define a header line (a sequence of column names) within a loading job using a DEFINE HEADER statement, such as the following:</p>
+                            <div class="modal-faq-code">
+                                CREATE ONLINE_POST JOB load2 FOR GRAPH LaborForce{<br>
+                                DEFINE HEADER head1 = "jobId", "jobName";<br>
+                                LOAD TO VERTEX occupation VALUES ($"jobId", $"jobName") USING USER_DEFINED_HEADER="head1";<br>
+                                }
+                            </div>
+                            <p>You can define a header line (a sequence of column names) within a loading job using a DEFINE HEADER statement, such as the following:</p>
+                            <div class="modal-faq-code">CREATE ONLINE_POST JOB load2 FOR GRAPH LaborForce</div>
+                        </div>
+
+                    </li>
                     <li><a href="#" >Text 3 3 3 3</a></li>
                     <li class="faq-sub-title">Sub title sub title</li>
                     <li><a href="#" >Text 1</a></li>
@@ -61,45 +92,6 @@
                     <li><a href="#" >Text 2 2 2 22</a></li>
                     <li><a href="#" >Text 3 3 3 3</a></li>
                 </ul>
-            </div>
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal titl2e2</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                </div>
             </div>
             <div class="col-sm-4">
                 <h3 class="group-title">Group 1</h3>
@@ -199,6 +191,22 @@
     </div>
 </section>
 
+<div class="modal-faq">
+    <div class="modal-faq-close"></div>
+    <div class="modal-faq-content">
+        <!--<div class="faq-modal-title">My data file doesn't have a header but I still want to name the columns.</div>-->
+        <!--<div class="faq-modal-date">Updated 22, Feb 2017</div>-->
+        <!--<p>You can define a header line (a sequence of column names) within a loading job using a DEFINE HEADER statement, such as the following:</p>-->
+        <!--<div class="modal-faq-code">-->
+            <!--CREATE ONLINE_POST JOB load2 FOR GRAPH LaborForce{<br>-->
+            <!--DEFINE HEADER head1 = "jobId", "jobName";<br>-->
+            <!--LOAD TO VERTEX occupation VALUES ($"jobId", $"jobName") USING USER_DEFINED_HEADER="head1";<br>-->
+            <!--}-->
+        <!--</div>-->
+        <!--<p>You can define a header line (a sequence of column names) within a loading job using a DEFINE HEADER statement, such as the following:</p>-->
+        <!--<div class="modal-faq-code">CREATE ONLINE_POST JOB load2 FOR GRAPH LaborForce</div>-->
+    </div>
+</div>
 
 <section class="footer">
     <div class="footer-menu-container">

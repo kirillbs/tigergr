@@ -8,6 +8,9 @@ body {
     overflow-x: hidden;
     font-family: "Montserrat";
 }
+a:hover{
+    text-decoration: none;
+}
 .inner-container{
     max-width: 1100px;
     margin: 0px auto;
@@ -124,6 +127,11 @@ body {
     color: #ff6c00;
     font-size: 15px;
     text-align: center;
+    transition:all .2s ease-in-out
+}
+.orange-button:hover{
+    background: #ff6c00;
+    color: white !important;
 }
 .orange-button:hover{
     color: #ff6c00;
@@ -215,6 +223,12 @@ body {
     position: absolute;
     bottom: 40px;
     left: 37px;
+    transition:all .2s ease-in-out
+}
+.ms-card-button:hover{
+    border: 1px solid #ff6c00;
+    background: #ff6c00;
+    color: white !important;
 }
 .ms-card a img{
     margin: 0px 10px;
@@ -373,7 +387,7 @@ body {
 .build-section.bs-b.faq-sect li a{
     padding: 0px;
     font-size: 12px;
-    z-index: 1051;
+    /*z-index: 1051;*/
 }
 .build-section.bs-b.faq-sect .row > div{
     padding-left: 15px;
@@ -386,4 +400,204 @@ a:focus {outline:0;}
 .build-section.know-base .row > div{
     padding-left: 15px;
     padding-right: 15px;
+}
+.modal-faq{
+    width: 1100px;
+    padding: 25px 20px;
+    max-width: 100%;
+    position: fixed;
+    max-height: 400px;
+    overflow-y: auto;
+    top: calc(50% - 200px);
+    z-index: 10;
+    background: white;
+    left: calc(50% - 550px);
+    border: 1px solid #e9ecef;
+    display: none;
+}
+.modal-faq-close{
+    width: 17px;
+    height: 17px;
+    background: url("../img/x.png");
+    position: absolute;
+    top: 17px;
+    right: 13px;
+    cursor: pointer;
+
+}
+.faq-modal-title{
+    font-size: 20px;
+    font-weight: 300;
+    color: #2d2d2d;
+    margin-bottom: 5px;
+}
+.faq-modal-date{
+    font-size: 12px;
+    color: #858585;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+.modal-faq p{
+    font-weight: 300;
+    color: #4c4c4c;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.modal-faq-code{
+    color: #4c4c4c;
+    font-family: "Courier New";
+    font-size: 14px;
+    padding: 25px 20px;
+    background: #e9ecef;
+    margin-bottom: 10px;
+}
+.faq-modal-link-content{
+    display: none;
+}
+.ref-section .inner-container{
+    display: flex;
+}
+.ref-content{
+    padding-left: 45px;
+    padding-top: 50px;
+    padding-bottom: 25px;
+    font-size: 14px;
+    /*width: 100%;*/
+}
+.ref-menu{
+    width: 350px;
+    background: #e9ecef;
+    padding-left: 35px;
+    position: relative;
+    display: flex;
+    padding-right: 0px;
+    font-size: 16px;
+    font-weight: 300;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    transition: all .2s ease-in-out
+}
+.ref-menu.hidden{
+    padding-left: 50px;
+    width: 35px;
+}
+.ref-menu ul{
+    list-style-type: none;
+    padding: 0px;
+    width: 315px;
+}
+.ref-menu ul li{
+    margin-bottom: 15px;
+    padding-right: 20px;
+}
+.ref-menu ul li a{
+    color: #4c4c4c;
+}
+.ref-menu ul li a:hover{
+    text-decoration: none;
+    color: rgb(60, 170, 247);
+}
+.ref-menu ul li ul{
+    padding: 15px 20px;
+    background: white;
+}
+.ref-menu ul li ul li{
+    font-size: 12px;
+    padding-left: 20px;
+    font-size: 12px;
+    position: relative;
+    margin-bottom: 5px;
+}
+.ref-menu ul li ul li:after{
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    width: 2px;
+    height: 2px;
+    background: #4c4c4c;
+}
+.ref-menu ul li ul li:hover:after{
+    background: rgb(60, 170, 247);
+}
+.ref-content h2{
+    margin-bottom: 22px;
+}
+.ref-menu ul li.active ul{
+    padding-top: 15px;
+}
+.ref-menu ul li.active ul li:first-child{
+    margin-top: 5px;
+}
+.ref-content h3{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.ref-content ul{
+    list-style-type: none;
+    padding-left: 20px;
+}
+.ref-content ul li:first-line {
+    padding-left: 10px;
+}
+.ref-content ul li{
+    position: relative;
+}
+.ref-content ul li:after{
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 9px;
+    width: 3px;
+    height: 3px;
+    border-radius: 3px;
+    background: #4c4c4c;
+}
+.code{
+    font-family: "Courier New";
+    font-size: 14px;
+    background: #e9ecef;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+.collapse-menu{
+    color: #03a9f4;
+    font-size: 14px;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    padding-left: 22px;
+    cursor: pointer;
+}
+.collapse-menu img{
+    position: absolute;
+    left: 0px;
+    top: 2px;
+}
+.ref-menu-container{
+    width: 315px;
+    overflow: hidden;
+    position: relative;
+}
+.uncollapse{
+    position: absolute;
+    top: 20px;
+    left: 17px;
+    transform: rotate(180deg);
+    display: none;
+    cursor: pointer;
+}
+.menu-orders{
+    padding-left: 32px;
+    background: url("../img/menu-b.png") 0px 0px no-repeat;
+    color: #03a9f4;
+}
+.menu-orders a:hover,
+.menu-orders a{
+    text-decoration: none;
+    color: #03a9f4;
+}
+a.group-title:hover{
+    color: #03a9f4;
+    text-decoration: none;
 }
