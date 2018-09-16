@@ -19,4 +19,11 @@ $(document).ready(function(){
             $('.collapse-menu').css('display', 'block');
         }, 200)
     });
+    $('.menu-mobile-buger').on('click', function () {
+       $('.mobile-menu-container').toggleClass('opened'); 
+    });
+    $('.mobile-menuu li').on('click', function () {
+        $('.mobile-menuu li').removeClass('active');
+        $(this).addClass('active');
+    });
 });

@@ -2,6 +2,7 @@ html,
 body,
 .page {
     height: 100%; /* needed for proper layout */
+    overflow-x: hidden;
 }
 body {
     overflow-y: scroll;
@@ -49,6 +50,9 @@ a:hover{
     color: white;
     margin-left: 30px;
  }
+.main-menu li:hover > a{
+    color: #ff6c00;
+}
 .main-menu li a:hover{
     font-size: 15px;
     color: #ff6c00;
@@ -600,4 +604,435 @@ a:focus {outline:0;}
 a.group-title:hover{
     color: #03a9f4;
     text-decoration: none;
+}
+.main-menu li{
+    position: relative;
+}
+.main-menu li ul{
+    /*background: #262626;*/
+    padding: 20px 20px;
+    position: absolute;
+    left: 30px;
+    top: 0px;
+    display: none;
+    width: 190px;
+    padding-top: 50px;
+    font-size: 12px;
+}
+.main-menu li ul:before{
+    content: '';
+    width: 100%;
+    height: calc(100% - 35px);
+    background: #262626;
+    position: absolute;
+    top: 35px;
+    left: 0px;
+}
+.main-menu li ul li a{
+    font-size: 12px;
+    color: #9da59e;
+    margin-left: 0px;
+}
+.main-menu li ul li:hover a{
+    font-size: 12px;
+}
+.main-menu li:hover ul{
+    display: block;
+}
+.color-white{
+    color: white;
+}
+@media screen and (min-width: 768px) {
+    .hide-on-desktop{
+        display: none !important;
+    }
+}
+@media screen and (max-width: 767px) {
+    .hide-on-mobile{
+        display: none !important;
+    }
+    .menu-mobile-buger{
+        width: 26px;
+        height: 23px;
+        background: url("../img/menu-mobile.png") 0px 0px no-repeat;
+        position: absolute;
+        top: 36px;
+        left: 15px;
+    }
+    .s-header{
+        background: white;
+        height: auto;
+        background: url(../img/head-bg.jpg);
+        background-size: auto 100%;
+        background-position: 50% 0px;
+        padding-top: 0px;
+        background-repeat: no-repeat;
+    }
+    .header-logo{
+        top: 25px;
+        left: 85px;
+    }
+    .s-header .inner-container{
+        padding: 17px 15px;
+    }
+    .header-title{
+        position: static;
+        margin-bottom: 20px;
+    }
+    .header-search-form{
+        position: relative;
+        top: auto;
+        left: auto;
+        margin-bottom: 20px;
+    }
+    .header-search-form input{
+        width: 100%;
+        height: 50px;
+        font-size: 22px;
+        padding-left: 55px;
+
+    }
+    .header-search-form input::placeholder{
+        font-size: 22px;
+    }
+    .header-search-form button i{
+        font-size: 33px;
+    }
+    .head-mobile-popular{
+        font-weight: 300;
+        font-size: 22px;
+        color: #3caaf7;
+    }
+    .webinars .inner-container{
+        background: white;
+        padding: 37px 15px;
+    }
+    .banner-text-top{
+        font-size: 30px;
+    }
+    .banner-text-bot{
+        font-size: 16px;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+    }
+    .register-button-button{
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        max-width: 375px;
+        margin: 0px auto;
+        height: 58px;
+        border: 3px solid #ff6c00;
+        font-size: 22px;
+        line-height: 52px;
+    }
+    .main-ms{
+        padding: 40px 15px;
+    }
+    .ms-card-inner-container{
+        padding: 40px 15px 35px;
+        margin-bottom: 15px;
+    }
+    .ms-dig{
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        border: 6px solid #ff6c00;
+        font-size: 55px;
+        line-height: 100px;
+        margin-bottom: 35px;
+    }
+    .ms-card-title{
+        font-size: 18px;
+    }
+    .ms-card-text{
+        font-size: 14px;
+    }
+    .ms-card-code{
+        font-size: 14px;
+    }
+    .ms-card-button{
+        width: 100%;
+        max-width: 375px;
+        height: 55px;
+        font-size: 16px;
+        left: 0px;
+        top: auto;
+        bottom: auto;
+        display: block;
+        position: relative;
+        line-height: 53px;
+        border: 2px solid rgb(101, 101, 101)
+    }
+    .build-section{
+        padding: 35px 15px;
+    }
+    .build-section .row > div{
+        padding: 0px;
+    }
+    .build-section .row{
+        margin: 0px;
+    }
+    .build-section .group-title {
+        font-size: 24px;
+    }
+    .build-gray-text {
+        font-size: 18px;
+        font-weight: 300;
+        margin-bottom: 33px;
+    }
+    .build-section .group-list a {
+        font-size: 18px;
+        font-weight: 300;
+        margin-bottom: 5px;
+    }
+    .build-section a.group-title{
+        font-size: 24px;
+        margin-bottom: 5px;
+        display: inline-block;
+        text-transform: uppercase;
+    }
+    .group-list li{
+        margin-bottom: 10px;
+    }
+    .footer-menu-container{
+        padding: 33px 15px;
+    }
+    .footer-menu{
+        display: block;
+        text-align: left;
+        margin-bottom: 0px;
+    }
+    .footer-menu li{
+        display: block;
+        margin-bottom: 22px;
+    }
+    .footer-menu li:last-child{
+        margin-bottom: 0px;
+    }
+    .footer-menu li:after{
+        display: none;
+    }
+    .footer-menu a{
+        font-size: 16px;
+        font-weight: 600;
+        margin: 0px;
+    }
+    .footer-cop-container{
+        font-size: 14px;
+        font-weight: bold;
+        padding: 26px 0px;
+    }
+    .modal-faq{
+        left: 0px;
+    }
+    .build-section.bs-b.faq-sect .row > div{
+        padding: 0px;
+    }
+    .build-section.bs-b.faq-sect li{
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .faq-sect .group-title{
+        /*margin-bottom: 25px;*/
+    }
+    .build-section.bs-b.faq-sect li a{
+        font-size: 16px;
+        font-weight: 300;
+    }
+    .build-section.bs-b.faq-sect li{
+        margin-bottom: 5px;
+    }
+    .build-section.bs-b.faq-sect li.faq-sub-title{
+        margin-top: 10px;
+        color: #4c4c4c;
+    }
+    .build-section.bs-b.faq-sect .group-title{
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-top: 10px;
+    }
+    .build-section.bs-b.faq-sect .inner-container > .group-title{
+        font-size: 24px;
+        font-weight: 300;
+        text-transform: none;
+    }
+    .build-section.know-base .row > div{
+        padding: 0px;
+    }
+    .build-section.know-base.bs-b .group-list a{
+        font-size: 18px;
+        font-weight: 500;
+        padding: 0px;
+        padding-left: 35px;
+        margin-bottom: 0px;
+    }
+    .build-section.bs-b .group-list a img{
+        top: 3px;
+    }
+    .build-section.know-base{
+        padding: 0px;
+        background: none;
+    }
+    .build-section.know-base .row > div{
+        padding: 35px 15px;
+    }
+    .build-section.know-base .row > div:nth-child(2n-1){
+        background: #e9ecef;
+    }
+    .ref-section .inner-container{
+        display: block;
+    }
+    .ref-menu{
+        display: none;
+    }
+    .ref-content{
+        padding: 40px 30px;
+        font-size: 18px;
+        font-weight: 300;
+    }
+    .ref-content h2{
+        font-size: 24px;
+        font-weight: 300;
+        margin-bottom: 25px;
+    }
+    .ref-content h3{
+        font-size: 22px;
+        font-weight: normal;
+    }
+    .ref-content ul{
+        padding-left: 40px;
+    }
+    .ref-content ul li:after {
+        content: '';
+        left: -12px;
+        top: 13px;
+    }
+    .code{
+        padding: 18px 23px;
+        line-height: 1.7;
+        margin-bottom: 25px;
+    }
+    .ref-content h3{
+        margin-bottom: 10px;
+    }
+    .ref-menu-mobile{
+        padding: 8px 15px;
+        background: #3caaf7;
+    }
+    .ref-menu-mobile select{
+        width: 100%;
+        border-radius: 3px;
+        height: 36px;
+        font-size: 16px;
+        font-weight: 300;
+        padding: 0px 12px;
+        border: none;
+    }
+    .ref-menu-mobile select:focus,
+    .ref-menu-mobile select:active{
+        border: none;
+    }
+    .mobile-menuu{
+        background: white;
+        padding: 0px;
+        list-style-type: none;
+    }
+    .mobile-header-container{
+        height: auto;
+        position: relative;
+        padding-top: 100px;
+    }
+    .mobile-menu-container{
+        max-height: 0;
+        transition: max-height 0.2s ease-out;
+        overflow: hidden;
+    }
+    .opened.mobile-menu-container{
+        max-height: 1000px;
+        transition: max-height 0.2s ease-in;
+    }
+    .mobile-menu-container{
+        padding: 0px 15px;
+    }
+    .mobile-menuu li{
+
+        position: relative;
+    }
+    .mobile-menuu li a:after{
+        content: '';
+        width: 6px;
+        height: 10px;
+        background: url("../img/chevr.png");
+        position: absolute;
+        top: 20px;
+        right: 3px;
+    }
+    .mobile-menuu li a{
+        color: #858585;
+        font-size: 16px;
+        position: relative;
+        min-height: 56px;
+        line-height: 56px;
+        display: block;
+        border-bottom: 1px solid #858585;
+    }
+    .mobile-menuu > li:last-child > a{
+        border-bottom: none;
+    }
+    .mobile-menuu > li:last-child ul li:first-child a{
+        border-top: 1px solid #858585;
+    }
+    .mobile-menuu > li:last-child ul li:last-child a{
+       border-bottom: none;
+    }
+    .mobile-menuu li.active > a{
+        color: #ff6c00;
+    }
+    .mobile-menuu li.active > a:after{
+        transform: rotate(90deg);
+    }
+    .mobile-menuu li ul{
+        padding: 0px;
+        list-style-type: none;
+        max-height: 0;
+        transition: max-height 0.15s ease-out;
+        overflow: hidden;
+    }
+    .mobile-menuu li.active ul{
+        max-height: 500px;
+        transition: max-height 0.25s ease-in;
+    }
+    .mobile-menuu li ul a{
+        padding-left: 30px;
+        font-size: 14px;
+    }
+    .mobile-menuu li ul a:after{
+        display: none;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1099px) {
+    .s-header{
+        padding-left: 15px;
+        padding-right: 15px;
+        background-size: auto 100% ;
+    }
+    .main-menu{
+        right: 15px;
+    }
+    .banner-text-top {
+        font-size: 20px;
+        padding-right: 50%;
+    }
+    .webinars,
+    .build-section{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .ref-content{
+        padding-right: 20px;
+        padding-left: 30px;
+    }
 }
