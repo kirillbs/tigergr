@@ -20,19 +20,49 @@
 
 <body>
 
-<section class="s-header">
-    <div class="inner-container">
-        <a href="#" class="header-logo"><img src="./img/header-logo.png" alt="tg"></a>
-        <ul class="main-menu">
+<section class="hide-on-desktop mobile-header-container">
+    <a href="#" class="header-logo">
+        <img src="./img/head-logo-mobile.png" alt="tg" class="hide-on-desktop">
+    </a>
+    <div class="menu-mobile-buger hide-on-desktop"></div>
+    <div class="mobile-menu-container hide-on-desktop">
+        <ul class="mobile-menuu hide-on-desktop">
             <li><a href="#">menu1</a></li>
             <li><a href="#">menu2</a></li>
-            <li><a href="#">menu3</a></li>
+            <li>
+                <a href="#">menu3</a>
+                <ul>
+                    <li><a href="#">sub 1</a></li>
+                    <li><a href="#">sub 2</a></li>
+                    <li><a href="#">sub 3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</section>
+<section class="s-header">
+    <div class="inner-container">
+        <a href="#" class="header-logo">
+            <img src="./img/header-logo.png" alt="tg" class="hide-on-mobile">
+        </a>
+        <ul class="main-menu hide-on-mobile">
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li>
+                <a href="#">menu3</a>
+                <ul>
+                    <li><a href="#">sub 1</a></li>
+                    <li><a href="#">sub 2</a></li>
+                    <li><a href="#">sub 3</a></li>
+                </ul>
+            </li>
         </ul>
         <h2 class="header-title">Get Started with TigerGraph</h2>
         <form action="" class="header-search-form">
-            <input type="text" name="ss" placeholder="Search">
+            <input type="text" name="ss" placeholder="Search" autocomplete="off">
             <button type="submit"><i class="fas fa-search"></i></button>
-         </form>
+        </form>
+        <div class="head-mobile-popular hide-on-desktop"><span class="color-white">Popular:</span> What is TigerGraph?, Getting Started, Download and Install</div>
     </div>
 </section>
 
